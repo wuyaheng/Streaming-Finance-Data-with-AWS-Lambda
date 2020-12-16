@@ -62,11 +62,11 @@ I created a Kinesis stream that holds the data. Below is a screenshot of the AWS
 ![kinesis_config](https://user-images.githubusercontent.com/52837649/102305104-21ea1800-3f2d-11eb-81c0-c866ff1bcb6c.png)
 
 ### 3. DataAnalyzer<br/>
-I created a serverless process that allows me to query the S3 data. Below is the screenshot of my S3 bucket. 
+I created a serverless process that allows me to query the S3 data. Below is a screenshot of my S3 bucket. 
 
 ![screenshot_of_s3_bucket](https://user-images.githubusercontent.com/52837649/102306851-34fee700-3f31-11eb-8253-a5850c628b8d.png)
 
-I also set up a Glue crawler so that I can run the AWS Athena queries against my data. Below is the screenshot that gives me the highest hourly stock “high” per company. 
+I also set up a Glue crawler so that I can run the AWS Athena queries against my data. Below is a screenshot that gives me the highest hourly stock “high” per company. 
 
 ![athena](https://user-images.githubusercontent.com/52837649/102308032-be171d80-3f33-11eb-8c96-0dcc7e401a0e.png)
 
