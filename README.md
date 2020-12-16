@@ -19,6 +19,10 @@ AWS Lambda, Kinesis, Glue, Athena, S3 and Python
 
 ## Infrastructure
 ![Picture1](https://user-images.githubusercontent.com/52837649/102304572-c1a6a680-3f2b-11eb-9a25-bb21c21752d8.png)
+1. DataTransformer: A lambda function that gathers the data.
+2. DataCollector: A Kinesis stream that holds the data.
+3. DataAnalyzer: A serverless process that allows us to query the S3 data.
+
 
 ## Questions
 For questions about the project, please contact me at wuyaheng2016@gmail.com
