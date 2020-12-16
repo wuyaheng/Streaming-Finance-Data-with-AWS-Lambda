@@ -66,7 +66,7 @@ I created a serverless process that allows me to query the S3 data. Below is a s
 
 ![screenshot_of_s3_bucket](https://user-images.githubusercontent.com/52837649/102306851-34fee700-3f31-11eb-8253-a5850c628b8d.png)
 
-I also set up a Glue crawler so that I can run the AWS Athena queries against my data. 
+I also set up a Glue crawler so that I can run the AWS Athena queries against my data. Below is the query that gives me the highest hourly stock “high” per company. 
 
 ## Questions
 For questions about the project, please contact me at wuyaheng2016@gmail.com
