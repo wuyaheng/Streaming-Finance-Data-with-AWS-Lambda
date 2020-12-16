@@ -7,12 +7,12 @@ In this project, I've collected one day’s worth of stock HIGH and LOW prices f
 
 ## Table of Contents
 
-* [Technology Used](#Technology Used)
+* [TechUsed](#TechUsed)
 
 * [Questions](#Questions)
 
 
-## Technology Used
+## TechUsed
 AWS Lambda, Kinesis, Glue, Athena, S3 and Python
 
 ## Questions
