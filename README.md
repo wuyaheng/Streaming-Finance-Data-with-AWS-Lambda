@@ -11,6 +11,8 @@ In this project, I've collected one day’s worth of stock HIGH and LOW prices f
 
 * [Infrastructure](#Infrastructure)
 
+* [Configuration](#Configuration)
+
 * [Questions](#Questions)
 
 
@@ -22,6 +24,8 @@ AWS Lambda, Kinesis, Glue, Athena, S3 and Python
 1. DataTransformer: A lambda function that gathers the data.
 2. DataCollector: A Kinesis stream that holds the data.
 3. DataAnalyzer: A serverless process that allows us to query the S3 data.
+
+## Configuration
 
 
 ## Questions
