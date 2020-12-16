@@ -21,7 +21,46 @@ AWS Lambda, Kinesis, Glue, Athena, S3 and Python
 
 ## Infrastructure
 ![Picture1](https://user-images.githubusercontent.com/52837649/102304572-c1a6a680-3f2b-11eb-9a25-bb21c21752d8.png)
-1. DataTransformer: A lambda function that gathers the data.
+1. DataTransformer
+I created a lambda function as provided below to collect the data from yfinance and put into a kinesis stream.
+```
+import json
+import boto3
+import yfinance as yf
+
+
+startDate = '2020-12-01'
+endDate = '2020-12-02'
+everyInterval = '5m'   
+tickers = ['FB', 'SHOP', 'BYND', 'NFLX', 'PINS', 'SQ', 'TTD', 'OKTA', 'SNAP', 'DDOG']
+
+
+kinesis = boto3.client('kinesis', "us-east-2")
+
+def lambda_handler(event, context):
+    for ticker in tickers:
+        data = yf.download(ticker, start=startDate, end=endDate, interval = everyInterval)
+        for Datetime, row in data.iterrows():
+            record = {
+              'high': row['High'],
+              'low': row['Low'],
+              'ts': str(Datetime), 
+              'name': ticker
+              }
+            
+            recordJSON = json.dumps(record)+"\n"
+            
+            kinesis.put_record(
+                StreamName="STA9760F2020_stream",
+                Data=recordJSON,
+                PartitionKey="partitionkey"
+                )
+    return {
+        'statusCode': 200,
+        'body': json.dumps("Hello from Lambda!")
+    }
+```
+
 2. DataCollector: A Kinesis stream that holds the data.
 3. DataAnalyzer: A serverless process that allows us to query the S3 data.
 
