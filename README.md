@@ -9,11 +9,15 @@ In this project, I've collected one day’s worth of stock HIGH and LOW prices f
 
 * [TechUsed](#TechUsed)
 
+* [Infrastructure](#Infrastructure)
+
 * [Questions](#Questions)
 
 
 ## TechUsed
 AWS Lambda, Kinesis, Glue, Athena, S3 and Python
+
+## Infrastructure
 
 ## Questions
 For questions about the project, please contact me at wuyaheng2016@gmail.com
