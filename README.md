@@ -26,6 +26,7 @@ AWS Lambda, Kinesis, Glue, Athena, S3 and Python
 3. DataAnalyzer: A serverless process that allows us to query the S3 data.
 
 ## Configuration
+Below is the screenshot of the AWS Kinesis configuration page 
 ![kinesis_config](https://user-images.githubusercontent.com/52837649/102305104-21ea1800-3f2d-11eb-81c0-c866ff1bcb6c.png)
 
 ## Questions
