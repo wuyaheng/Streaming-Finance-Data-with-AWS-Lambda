@@ -18,6 +18,7 @@ In this project, I've collected one day’s worth of stock HIGH and LOW prices f
 AWS Lambda, Kinesis, Glue, Athena, S3 and Python
 
 ## Infrastructure
+![Picture1](https://user-images.githubusercontent.com/52837649/102304572-c1a6a680-3f2b-11eb-9a25-bb21c21752d8.png)
 
 ## Questions
 For questions about the project, please contact me at wuyaheng2016@gmail.com
