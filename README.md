@@ -62,19 +62,12 @@ I created a Kinesis stream that holds the data. Below is a screenshot of the AWS
 ![kinesis_config](https://user-images.githubusercontent.com/52837649/102305104-21ea1800-3f2d-11eb-81c0-c866ff1bcb6c.png)
 
 ### 3. DataAnalyzer<br/>
-I created a serverless process that allows me to query the S3 data. Below is a screenshot of my S3 bucket. 
+I created a serverless process that allows me to query the S3 data. Below is the screenshot of my S3 bucket. 
 
 ![screenshot_of_s3_bucket](https://user-images.githubusercontent.com/52837649/102306851-34fee700-3f31-11eb-8253-a5850c628b8d.png)
 
-I also set up a Glue crawler so that I can run the AWS Athena queries against my data. Below is the query that gives me the highest hourly stock “high” per company. 
-```
-SELECT SPLIT_PART(ID,',',1) as name, max_high, SPLIT_PART(ID,',',3) as ts, SPLIT_PART(ID,',',2) as hour FROM
-(SELECT DISTINCT(ID), max_high FROM
-(SELECT CONCAT(name,',',hour,',',ts) AS ID, max_high FROM (SELECT A.name, A.hour, A.ts, B.max_high FROM (SELECT name, high, ts, SUBSTRING(ts, 12, 2) AS hour  FROM stocks.sta9760f2020datastream) A
-INNER JOIN (SELECT name, SUBSTRING(ts, 12, 2) AS hour, MAX(high) AS max_high FROM stocks.sta9760f2020datastream GROUP BY name, SUBSTRING(ts, 12, 2)) B
-ON A.name = B.name AND A.hour = B.hour AND A.high = B.max_high)))
-ORDER BY name, ts;
-```
+I also set up a Glue crawler so that I can run the AWS Athena queries against my data. Below is the screenshot that gives me the highest hourly stock “high” per company. 
+![athena](https://user-images.githubusercontent.com/52837649/102307864-5eb90d80-3f33-11eb-9894-0bd05b70ae92.png)
 
 ## Questions
 For questions about the project, please contact me at wuyaheng2016@gmail.com
