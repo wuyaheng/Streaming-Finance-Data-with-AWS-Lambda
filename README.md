@@ -1,4 +1,3 @@
-
 # Streaming-Finance-Data-with-AWS-Lambda
 
 ## Description
