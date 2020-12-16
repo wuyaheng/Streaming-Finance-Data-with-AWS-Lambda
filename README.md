@@ -58,9 +58,13 @@ def lambda_handler(event, context):
 ```
 ### 2. DataCollector<br/>
 I created a Kinesis stream that holds the data. Below is a screenshot of the AWS Kinesis configuration page.
+
 ![kinesis_config](https://user-images.githubusercontent.com/52837649/102305104-21ea1800-3f2d-11eb-81c0-c866ff1bcb6c.png)
 
-### 3. DataAnalyzer: A serverless process that allows us to query the S3 data.
+### 3. DataAnalyzer<br/>
+I created a serverless process that allows me to query the S3 data. Below is a screenshot of my S3 bucket. 
+
+![screenshot_of_s3_bucket](https://user-images.githubusercontent.com/52837649/102306851-34fee700-3f31-11eb-8253-a5850c628b8d.png)
 
 
 ## Questions
