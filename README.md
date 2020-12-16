@@ -11,8 +11,6 @@ In this project, I've collected one day’s worth of stock HIGH and LOW prices f
 
 * [Infrastructure](#Infrastructure)
 
-* [Configuration](#Configuration)
-
 * [Questions](#Questions)
 
 
@@ -58,13 +56,12 @@ def lambda_handler(event, context):
         'body': json.dumps("Hello from Lambda!")
     }
 ```
-### 2. DataCollector: A Kinesis stream that holds the data.
+### 2. DataCollector<br/>
+I created a Kinesis stream that holds the data. Below is a screenshot of the AWS Kinesis configuration page.
+![kinesis_config](https://user-images.githubusercontent.com/52837649/102305104-21ea1800-3f2d-11eb-81c0-c866ff1bcb6c.png)
+
 ### 3. DataAnalyzer: A serverless process that allows us to query the S3 data.
 
-## Configuration
-Below is a screenshot of the AWS Kinesis configuration page 
-
-![kinesis_config](https://user-images.githubusercontent.com/52837649/102305104-21ea1800-3f2d-11eb-81c0-c866ff1bcb6c.png)
 
 ## Questions
 For questions about the project, please contact me at wuyaheng2016@gmail.com
